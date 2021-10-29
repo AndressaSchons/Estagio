@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <style type="text/css">
+        body {
+            background-color: #FAEBD7;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .quadrados-imoveis {
+            background-color: violet;
+            margin-top: 15px;
+        }
+
+        #menu ul {
+            padding: 0px;
+            margin: 0px;
+            background-color: #fff;
+            list-style: none;
+            text-align: right;
+        }
+
+        #menu ul li {
+            display: inline;
+        }
+
+        .quadrado-infos {
+            width: 1400px;
+            height: 439px;
+            border: solid;
+            border-color: black;
+            position: static;
+            display: block;
+            z-index: auto;
+            transition: 4s;
+            transition-timing-function: linear;
+            transition-delay: 5s;
+
+        }
+
+        .slideshow-infos {
+            padding: 20%;
+            height: 520px;
+            width: 935px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+
+        .slides {
+            display: none;
+
+        }
+    </style>
+
+
+    <title>Pédo Imóveis</title>
+</head>
+
+<body>
+    <nav id="menu">
+        <a href=""><img
+                src="https://s01.jetimgs.com/trtmSQMvLcly4zpNjJhSVpyv7QKbtyXFqM9yZvVpYSfrajssJP8X2Ya7ZBvXYB_gD8B0IWTmaKYlz7OESrGVJO8MIQrz-hkPLUuU3Yf_rWuOFYhdWVRhRTLT0A/logo+novo.jpg"></a>
+        <ul>
+
+            <li><a href="">Início</a></li>
+            <li><a href="">Comprar</a>
+            <li><a href="">Alugar</a>
+            <li><a href="">Serviçõs</a>
+            <li><a href="">Blog</a>
+            <li><a href="">Institucional</a>
+            <li><a href="">Contato</a>
+        </ul>
+    </nav>
+    <!--<div class="quadrado-infos">
+        AQUI ESTARÃO AS INFOS
+    </div>-->
+
+    <p>Imóveis a Venda</p>
+    <div class="w3-content w3-display-container" style="max-width:500px">
+
+            <img class="slide" src="./imagens/1.jpg" alt="Curitiba" style="width:100%">
+            <img class="slide" src="./imagens/2.jpg" alt="Pelotas" style="width:100%">
+            <img class="slide" src="./imagens/3.jpg" alt="Campo Mourão" style="width:100%">
+            <img class="slide" src="./imagens/4.jpg" alt="Curitiba" style="width:100%">
+        
+    </div>
+    <script>
+        var slideIndex = 0;
+        
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slide");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {
+                slideIndex = 1
+            }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000);
+        }
+        
+        carousel();
+    </script>
+
+</body>
+
+</html>
