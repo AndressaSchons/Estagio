@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style type="text/css">
         body {
             background-color: #FAEBD7;
@@ -24,105 +25,161 @@
             list-style: none;
             text-align: right;
         }
-        
-        #menu li a:hover{
-    color: blue;
-}
-        
+
+        #menu li a:hover {
+            color: blue;
+        }
+
         #menu a {
             padding: 15px;
             text-decoration: none;
             font-size: 17px;
-              
+
         }
 
         #menu ul li {
             display: inline;
         }
 
-        .quadrado-infos {
+        .box {}
+
+        .box-atras {
+            background-color: #fff;
+            border-color: #fff;
+            border-style: solid;
+            box-shadow: 0 0 8px 0 #00000036;
+        }
+
+
+        #carouselExampleControls img {
+            padding: 20px;
             width: 1400px;
             height: 439px;
-            border: solid;
-            border-color: black;
-            position: static;
-            display: block;
-            z-index: auto;
-            transition: 4s;
-            transition-timing-function: linear;
-            transition-delay: 5s;
-
+            margin: auto;
+            border-radius: 5px;
         }
 
-        .slideshow-infos {
-            padding: 20%;
-            height: 520px;
-            width: 935px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-
-            transform: translate(-50%, -50%);
-        }
-
-        .slides {
-            display: none;
-
+        .white {
+            background-color: white;
         }
     </style>
-
-
+    <!--style slides: border-radius: 5px; image-rendering: optimizeQuality;box-sizing: border-box; margin: 0 auto; max-width: 100%; padding: 0; 1400 X 439-->
+    <!--style para eles: style="transition: all 0.7s ease 0s; width: 11200px; transform: translate3d(-2800px, 0px, 0px);"-->
     <title>Imóveis em Lajeado - Pédo Imóveis - Mateus Pedó Imóveis Eireli</title>
 </head>
 
 <body>
-    <nav id="menu">
-        <a href=""><img
-                src="https://s01.jetimgs.com/trtmSQMvLcly4zpNjJhSVpyv7QKbtyXFqM9yZvVpYSfrajssJP8X2Ya7ZBvXYB_gD8B0IWTmaKYlz7OESrGVJO8MIQrz-hkPLUuU3Yf_rWuOFYhdWVRhRTLT0A/logo+novo.jpg"></a>
-        <ul>
-
-            <li><a href="">Início</a></li>
-            <li><a href="https://www.pedoimoveis.com.br/imoveis/a-venda">Comprar</a>
-            <li><a href="https://www.pedoimoveis.com.br/imoveis/alugar">Alugar</a>
-            <li><a href="">Serviços</a>
-            <li><a href="https://www.pedoimoveis.com.br/blog">Blog</a>
-            <li><a href="https://www.pedoimoveis.com.br/institucional">Institucional</a>
-            <li><a href="https://www.pedoimoveis.com.br/contato">Contato</a>
-        </ul>
-    </nav>
-    <!--<div class="quadrado-infos">
-        AQUI ESTARÃO AS INFOS
-    </div>-->
-
-    <p>Imóveis a Venda</p>
-    <div class="w3-content w3-display-container" style="max-width:500px">
-
-            <img class="slide" src="./imagens/1.jpg" alt="Curitiba" style="width:100%">
-            <img class="slide" src="./imagens/2.jpg" alt="Pelotas" style="width:100%">
-            <img class="slide" src="./imagens/3.jpg" alt="Campo Mourão" style="width:100%">
-            <img class="slide" src="./imagens/4.jpg" alt="Curitiba" style="width:100%">
+    <section class="white">
         
+        <div class="container">
+            <header>
+
+                <nav id="menu" class="navbar navbar-expand-md navbar-light bg-light">
+                    <div class="navbar nav">
+                        <div class="navbar-brand">
+                            <a href="">
+                                <img class="w-25"
+                                    src="https://s01.jetimgs.com/trtmSQMvLcly4zpNjJhSVpyv7QKbtyXFqM9yZvVpYSfrajssJP8X2Ya7ZBvXYB_gD8B0IWTmaKYlz7OESrGVJO8MIQrz-hkPLUuU3Yf_rWuOFYhdWVRhRTLT0A/logo+novo.jpg">
+                            </a>
+                        </div>
+                        <div id="navbarNav" class="d-flex">
+                            <ul class="navbar-nav align-items-end">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Início</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Comprar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Alugar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">Serviços</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">Institucional</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">Contato</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block img-fluid" src="https://source.unsplash.com/random/1400x439"
+                            alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block img-fluid" src="./imagens/2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block img-fluid" src="https://source.unsplash.com/random/1400x439"
+                            alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" data-bs-target="#carouselExampleControls" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" data-bs-target="#carouselExampleControls" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="box ms-auto mb-2">
+                <div class="">
+                    <div class="row box-atras">
+                        <div class="col-md-3 my-1">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                                    checked>
+                                <label class="btn btn-outline-primary" for="btnradio1">Venda</label>
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio2">Locação</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-1">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open </option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 my-1">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-md-1 my-1">
+                            <button class="btn btn-primary" type="submit">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
     </div>
-    <script>
-        var slideIndex = 0;
-        
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("slide");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) {
-                slideIndex = 1
-            }
-            x[slideIndex - 1].style.display = "block";
-            setTimeout(carousel, 2000);
-        }
-        
-        carousel();
+    <p>Imóveis a Venda</p>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
     </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
