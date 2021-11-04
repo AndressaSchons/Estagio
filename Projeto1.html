@@ -104,6 +104,20 @@
             padding-bottom: 15px;
             padding-left: 10px;
         }
+        
+        #menu li  ul{
+            position:absolute;
+            top:60px;
+            left:600px;
+            background-color:#cccccc;
+            display:none;
+            z-index: 2;
+            text-align: left;
+           
+        }
+        
+        #menu li:hover ul, .menu li.over ul{display:block;}
+       
 
     </style>
 
@@ -122,8 +136,10 @@
                                     src="https://s01.jetimgs.com/trtmSQMvLcly4zpNjJhSVpyv7QKbtyXFqM9yZvVpYSfrajssJP8X2Ya7ZBvXYB_gD8B0IWTmaKYlz7OESrGVJO8MIQrz-hkPLUuU3Yf_rWuOFYhdWVRhRTLT0A/logo+novo.jpg">
                             </a>
                         </div>
-                        <div id="navbarNav" class="d-flex">
+                        
+                            <nav id="menu">
                             <ul class="navbar-nav align-items-end">
+                                
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page"
                                         href="https://www.pedoimoveis.com.br/imoveis/a-venda">Início</a>
@@ -136,8 +152,17 @@
                                     <a class="nav-link" href="https://www.pedoimoveis.com.br/imoveis/alugar">Alugar</a>
                                 </li>
                                 
-                                <li class="nav-item">
-                                    <a class="nav-link">Serviços</a>
+                                <li class="nav-item"> 
+                                    <a class="nav-link" href="#">Serviços</a>
+                                   
+                                    <ul>
+                                        <li> <a href="https://www.pedoimoveis.com.br/solicite-seu-imovel"> Solicite seu imóvel</a> </li>
+                                        <li><a href="https://www.pedoimoveis.com.br/anuncie-seu-imovel"> Anuncie seu imóvel</a></li>
+                                        <li><a href="https://www.pedoimoveis.com.br/servico/como-negociar-seu-imovel">Como Negociar seu Imóvel</a></li>
+                                        <li><a href="https://www.pedoimoveis.com.br/servico/minha-lajeado">Minha Lajeado</a></li>
+                                        <li><a href="https://www.pedoimoveis.com.br/servico/aluguel-online">Aluguel</a></li>
+                                        <li><a href="https://www.pedoimoveis.com.br/servico/simulacao-de-financiamento">Simulação de Financiamento</a></li>
+                                    </ul>
                                 </li>
                                 
                                 <li class="nav-item">
@@ -153,8 +178,7 @@
                                 </li>
                                     
                                 <li class="menu-item secondary-bc header-contact"> <i class="fas fa-phone-square header-contact-button"></i> <div class="phones-popup"> <div class="sede"> <div class="name"></div> <div class="phone"> <div class="description">
-                        </div>
-                    </div>
+                     </ul>
                 </nav>
             </header>
 
